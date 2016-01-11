@@ -6,15 +6,37 @@
 				var result = Number.MAX_VALUE + Number.MAX_VALUE;
 				alert(isFinite(result));
 			}
+			function showFinite() {
+				alert(Number.NEGATIVE_INFINITY);
+			}
+
+			function test() {
+				alert(parseInt("070"));
+			}
+
+			function switchTest() {
+				var num = 15;
+				switch(true) {
+					case 9 > 8:
+						alert ("> 8");
+						break;
+					case 1 > 9:
+						alert ("> 9");
+						break;
+					default: break;
+				}
+			}
 			<!--  -->
 
-			
+
 		</script>
 	</head>
 
 	<body>
 		<script type="text/javascript">
-			testFinite();
+			// testFinite();
+			// showFinite();
+			switchTest();
 		</script>
 		<p>Hello world!</p>
 	</body>
