@@ -1,0 +1,149 @@
+<script type = "text/javascript">
+	function sayHi() {
+		alter("hi");
+	}
+</script>
+
+
+
+<script type = "text/javascript">
+	function sayScript() {
+		alter("<\/script>");
+	}
+</script>
+
+
+<script type="text/javascript" src = "example.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Example Html Page</title>
+	<script type="text/javascript" src="some.js"></script>
+	</head>
+	<body>
+		<!-- content -->
+	</body>	
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Example Html Page</title>
+	</head>
+	<body>
+		<!-- content -->
+			<script type="text/javascript" src="some.js"></script>
+	</body>	
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Example Html Page</title>
+	<script type="text/javascript" defer="defer" src="some.js"></script>
+	</head>
+	<body>
+		<!-- content -->
+	</body>	
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Example Html Page</title>
+	<script type="text/javascript" async src="some.js"></script>
+	<!-- 浏览器立即下赞，但等到页面结束执行，与async不同，不保证按照顺序 -->
+	</head>
+	<body>
+		<!-- content -->
+	</body>	
+</html>
+
+<script type="text/javascript">
+	function compare(a, b) {
+		if (a < b) {
+			alert("a is less b");
+		} else if (a > b) {
+			alert("a is greater than b");
+		} else {
+			alert("a is equal to b");
+		}
+
+	}
+</script>
+<!-- html 有效，xhmlt无效，在xhml中<会被当做一个新的标签 -->
+
+<!-- 解决办法1 -->
+<script type="text/javascript">
+	function compare(a, b) {
+		if (a &lt; b) {
+			alert("a is less b");
+		} else if (a > b) {
+			alert("a is greater than b");
+		} else {
+			alert("a is equal to b");
+		}
+
+	}
+</script>
+
+<!-- 解决办法2 -->
+<script type="text/javascript"><![CDATA[
+	function compare(a, b) {
+		if (a < b) {
+			alert("a is less b");
+		} else if (a > b) {
+			alert("a is greater than b");
+		} else {
+			alert("a is equal to b");
+		}
+
+	}
+]]></script>
+<!-- 兼容xhmtl的浏览器可以解决问题 -->
+
+<!-- 解决办法3 -->
+<script type="text/javascript">
+//<![CDATA[
+	function compare(a, b) {
+		if (a < b) {
+			alert("a is less b");
+		} else if (a > b) {
+			alert("a is greater than b");
+		} else {
+			alert("a is equal to b");
+		}
+
+	}
+//]]>
+</script>
+
+尽量使用外部文件优于嵌入代码：
+	可维护性
+	易于缓存
+	适应未来
+
+文档模式 doctype
+混杂模式(quirks mode)  标准模式(standards mode)
+
+
+
+
+noscript
+	浏览器不支持脚本
+	浏览器禁用脚本
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Example Html Page</title>
+	<script type="text/javascript" src="some.js"></script>
+	</head>
+	<body>
+		<noscript>
+			<p>本页面需要浏览器支持（启用)javascript.</p>
+		</noscript>
+		<!-- content -->
+	</body>	
+</html>
