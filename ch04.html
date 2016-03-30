@@ -1,0 +1,23 @@
+javascript 有两种类型的值：基本类型和引用类型
+基本类型：Undefined, Null, Boolean, Number, String
+	占据固定大小的空间，保存在栈内存中
+	复制是，创建值的副本
+
+	
+引用类型：Object
+	保存在队内存，由多个值构成
+	动态
+	包含引用类型的变量并不是对象本身，而是指向对象的指针
+	复制时，复制的是指针
+可用instanceof检测类型
+result = variable instanceof constructor
+alter(person instanceof Object);    //true
+变量存在作用域（执行环境）
+全局执行环境和函数执行环境
+没有块作用域
+作用域连
+with  catch  延长作用域链
+自动垃圾收集机制
+标记清楚  和  引用计数
+解除变量 	消除循环引用
+			有利于垃圾收集
