@@ -1,0 +1,65 @@
+1、在XHTML中的用法
+	XHTML(Extensible HyperText Markup Language)
+		是将HTML作为XML的应用而重新定义的一个标准
+		编写XHTML比HTML严格得多
+	例子：
+		<script type="text/javascript">
+			function compare(a, b) {
+				if (a < b) {
+					alert("A is less than B");
+				}  else if (a > b) {
+					alert("A is greater than B");
+				}  else {
+					alert("A is equal to B");
+				}
+			}
+		</script>
+		<!-- 在html中是有效的，但在XHTML中<会被当做一个新标签进行解析 -->
+		<!-- 解决办法有两个 -->
+		一，用相应的html实体（$lt)
+		<script type="text/javascript">
+			function compare(a, b) {
+				if (a $lt; b) {
+					alert("A is less than B");
+				}	else if (a > b) {
+					alert("A is greater than B");
+				}	else {
+					alert("A is equal to B");
+				}
+			}
+		</script>
+		二、用cData片段来包含一段JavaScript代码
+		<script type="text/javascript"><![CDATA[
+			function compare(a, b) {
+				if (a < b) {
+					alert("A is less than B");
+				}  else if (a > b) {
+					alert("A is greater than B");
+				}  else {
+					alert("A is equal to B");
+				}
+			}
+		]]></script>
+		在不兼容XHMTL的浏览器，使用JavaScript的注释将cData标记注释掉
+		<script type="text/javascript">
+		//<![CDATA[
+			function compare(a, b) {
+				if (a < b) {
+					alert("A is less than B");
+				}  else if (a > b) {
+					alert("A is greater than B");
+				}  else {
+					alert("A is equal to B");
+				}
+			}
+		//]]>
+		</script>
+		将页面的MIME类型指定为"application/xhtml+xml"的情况下回出发XHTNL模式，并不是所有浏览器都支持
+
+2、嵌入代码与外部文件
+	外部文件优点：
+		1、可维护性
+		2、可缓存
+		3、适应未来
+
+3、noscript元素
