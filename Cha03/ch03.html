@@ -9,7 +9,20 @@
 4、数据类型
 	5中简单数据类型：Undefined, Null, Boolean, Number, String
 	和一种复杂数据类型：Object
-
+5、比较操作
+	字符串比较
+		比较的是自付对应编码，所以如果需要比较对应字符的字母表顺讯
+		var result = "Brick".toLowerCase() < "alphabet".toLowerCase(); //false
+		两个数字的字符串比较时，比较的的是以字符串的形式
+		var result = "23" < "3";	//ture
+		var result = "23" < 3;		//false
+		与数字比较都会进行数值之间的比较，如果不能转化为数值，转化为NaN，与任何数值进行比较都为false
+6、switch
+	使用的是全等
+	可以使用于多种类型
+7、函数参数
+	可以和形参不一致
+	可以使用arguments[]访问
 
 old:
 语法
