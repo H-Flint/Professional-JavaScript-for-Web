@@ -10,7 +10,8 @@ javascript 有两种类型的值：基本类型和引用类型
 	动态
 	包含引用类型的变量并不是对象本身，而是指向对象的指针
 	复制时，复制的是指针
-可用instanceof检测类型
+可用typeof检测基本类型
+可用instanceof检测引用类型
 result = variable instanceof constructor
 alter(person instanceof Object);    //true
 变量存在作用域（执行环境）
@@ -22,3 +23,4 @@ with  catch  延长作用域链
 标记清楚  和  引用计数
 解除变量 	消除循环引用
 			有利于垃圾收集
+
