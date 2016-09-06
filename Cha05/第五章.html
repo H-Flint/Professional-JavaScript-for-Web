@@ -1,0 +1,27 @@
+第五章
+引用类型
+
+
+1、Object对象
+	使用new操作符
+		var person = new Object();
+		person.name = "Nicholas";
+		person.age = 29;
+	使用对象字面量
+		var person = {
+			name : "Nicholas",
+			age : 29
+		}
+		也可以使用字符串
+		var person = {
+			"name" : "wang",
+			"age" : 24,
+			5 : true
+		}
+	对象可以用来传递多个参数
+	访问属性是可以有两种方法：
+		alert(person.name);
+		alert(person["name"]);
+		方括号可以通过变量来访问属性，属性名中包含语法错误的字符，或者保留字时应用方括号访问
+2、Array类型
+	是有序数组，但每一项可以保存任何类型，且数组的大小可以自动调整
